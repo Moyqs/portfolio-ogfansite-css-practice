@@ -1,0 +1,525 @@
+/* Universal & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
+    src: url('../fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf') format('truetype');
+}
+html {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fefffd;
+    height: 100%;
+}
+
+body {
+    height: 200%;
+    min-width:400px
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }  
+
+/* background */
+
+.background {
+    position: fixed;
+}
+
+/* header */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 5rem;
+    background-color: #181c28;
+    border-bottom: 2px solid #dabe74;
+    z-index: 999;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    max-width: 68px;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+}
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    flex-grow: 1;
+}
+
+ul {
+    margin: 0;
+}
+
+ul li {
+    padding: 0 1.5rem;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #fefffd;
+    text-transform: uppercase;
+}
+
+.homepage {
+    color: red;
+}
+
+/* socials */
+
+.socials-container {
+    display: flex;
+    height: 5rem;
+    padding: 0;
+    align-items: center;
+}
+
+.socials-container img {
+    height: 1.5rem;
+    width: auto;
+    margin: 0 0.5rem;
+}
+
+/* main */
+main {
+    background-image: url("../images/blue\ gold\ background\ darkened.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main p {
+    height: 1000px;
+}
+
+/* Sponsors */
+
+
+.our-sponsors h2 {
+    position: relative;
+    left: 3rem;
+    top: 2rem;
+    margin-top: 3rem;
+}
+
+.center-grid {
+    display: flex;
+    justify-content: center;  
+}
+
+.sponsors-container {
+    display: grid;
+    grid-gap: 3px;
+    width: 90%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+#redbull {
+    height: 4rem;
+}
+
+#bmw {
+    height: 4rem;
+}
+
+#bet {
+    height: 2.5rem;
+}
+
+#grab {
+    height: 2.5rem;
+}
+
+#steelseries {
+    height: 2rem;
+    min-width: 200px;
+}
+
+
+/* videos */
+
+.videos-container {
+    display: grid;
+    grid-gap: 0.8rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 3rem;
+    /* margin-bottom: 3rem; */
+}
+
+.videos-container img {
+    height: auto;
+    width: 100%;
+    border-radius: 2%;
+}
+
+.videos h2 {
+    position: relative;
+    left: 3rem;
+    top: 1rem;
+    margin-top: 5rem;
+}
+
+/* Footer */
+
+#footerlogo {
+    height: 100px;
+    width: auto;
+    max-width: 68px;
+    z-index: 20;
+} 
+
+footer {
+    display: flex;
+    /* color: #fefffd; */
+    width: 100%;
+    justify-content: center;
+    background-image: url("../images/blue\ gold\ background\ darkened.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footerbg {
+    display: flex;
+    background-color: #181c28;
+    margin-top: 3rem;
+    height: 500px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-grid {
+    display: grid;
+    width: 90%;
+    grid-template: 1fr 5fr / 1fr 3fr 3fr 1fr 2.5fr;
+    column-gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    /* margin-top: 3rem; */
+}
+
+.footer-grid p {
+    padding-top: 0.6rem;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template: 1fr 5fr / auto 1fr;
+    grid-area: 1 / 1 / span 2 / span 2;
+    grid-column-gap: 0.8rem;
+}
+
+#footerlogo {
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+
+#ogas a {
+    grid-area: 1 / 2 / span 1 / span 1;
+    position: relative;
+    text-decoration: none; 
+    color: #fefffd;
+}
+
+.underline:after {
+        position: absolute;
+        content: '';
+        height: 1px;
+		  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+        bottom: -10px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: red;
+        z-index: 1000;
+}
+
+#ogasp {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#recentposts a {
+    grid-area: 1 / 3 / span 1 / span 1;
+    position: relative;
+    text-decoration: none; 
+    color: #fefffd;
+}
+
+#recentpostsp {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+#pages a {
+    grid-area: 1 / 4 / span 1 / span 1;
+    position: relative;
+    text-decoration: none; 
+    color: #fefffd;
+}
+
+#pagesli {
+    grid-area: 2 / 4 / span 1 / span 1;
+    padding: 0;
+}
+
+#pagesli li {
+    padding: 0;
+}
+
+#social a {
+    grid-area: 1 / 5 / span 1 / span 1;
+    position: relative;
+    text-decoration: none; 
+    color: #fefffd;
+}
+
+#socialli {
+    grid-area: 2 / 5 / span 1 / span 1;
+    padding: 0;
+}
+
+#socialli li {
+    padding: 0;
+}
+
+/* Responsive Tablet */
+
+@media only screen and (max-width: 1020px) {
+    /* sponsors */
+    .our-sponsors h2 {
+        position: static;
+        text-align: center;
+    }
+
+    .sponsors-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 100px);
+    }
+
+    #steelseries {
+        grid-area: 2 / 3 / span 1 / span 1;
+    }
+
+    /* videos */
+    .videos-container {
+        width: 400px;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(3, 1fr);
+        /* margin-bottom: 3rem; */
+    }
+
+    .videos h2 {
+        position: static;
+        text-align: center;
+    }
+
+    .videos-grid {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .videos-container img {
+        height: auto;
+        width: 100%;
+        border-radius: 2%;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-rows: 1fr auto auto auto auto auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .logo-grid {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    #recentposts a {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    #recentposts {
+        padding-top: 4rem;
+    }
+
+    #recentpostsp {
+        grid-area: 3 / 1 / span 1 / span 1;
+        padding-top: 0.8rem;
+    }
+
+    #pages {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    #pages a {
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+    
+    #pagesli {
+        grid-area: 5 / 1 / span 1 / span 1;
+        display: flex;
+    }
+    
+    #pagesli li {
+        padding-right: 1.5rem;
+    }
+
+    #social {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    #social a {
+        grid-area: 6 / 1 / span 1 / span 1;
+    }
+    
+    #socialli {
+        grid-area: 7 / 1 / span 1 / span 1;
+        display: flex;
+    }
+    
+    #socialli li {
+        padding-right: 1.5rem;
+    }
+
+    .footerbg {
+        background-color: #181c28;
+        height: auto;
+    }
+}
+
+/* Responsive Phone */
+@media only screen and (max-width: 760px) and (min-width: 400px) {
+    /* sponsors */
+
+    .sponsors-container {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+
+    .sponsors-container img {
+        padding: 0 2rem;
+        margin: 1rem 0;
+    }
+
+
+    /* videos */
+    .videos-container {
+        width: 400px;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(3, 1fr);
+        /* margin-bottom: 3rem; */
+    }
+
+    .videos h2 {
+        position: static;
+        text-align: center;
+    }
+
+    .videos-grid {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .videos-container img {
+        height: auto;
+        width: 100%;
+        border-radius: 2%;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-rows: repeat (7, auto);
+        grid-template-columns: 1fr;
+    }
+
+    .logo-grid {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    #recentposts a {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    #recentposts {
+        padding-top: 4rem;
+    }
+
+    #recentpostsp {
+        grid-area: 3 / 1 / span 1 / span 1;
+        padding-top: 0.8rem;
+    }
+
+    #pages {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    #pages a {
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+    
+    #pagesli {
+        grid-area: 5 / 1 / span 1 / span 1;
+        display: flex;
+    }
+    
+    #pagesli li {
+        padding-right: 1.5rem;
+    }
+
+    #social {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    #social a {
+        grid-area: 6 / 1 / span 1 / span 1;
+    }
+    
+    #socialli {
+        grid-area: 7 / 1 / span 1 / span 1;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #socialli li {
+        padding-right: 1.5rem;
+    }
+
+    .footerbg {
+        background-color: #181c28;
+        height: auto;
+    }
+
+    #tiktok {
+        white-space: nowrap;
+    }
+}
