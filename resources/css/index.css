@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     max-width: 100%;
 }
 
@@ -14,19 +15,26 @@ html {
     font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 500;
+    width: 100vw;
     color: #fefffd;
     height: 100%;
 }
 
 body {
     height: 200%;
-    min-width:400px
+    width: 100vw;
+    min-width:250px,
 }
 
 html, body {
     margin: 0;
     padding: 0;
   }  
+
+.sponsors-h2,
+.videos-h2 {
+    display: inline-block;
+}
 
 /* background */
 
@@ -245,6 +253,11 @@ footer {
     color: #fefffd;
 }
 
+#ogas {
+    display: inline-block;
+    width: 70%;
+}
+
 .underline:after {
         position: absolute;
         content: '';
@@ -261,6 +274,17 @@ footer {
 
 #ogasp {
     grid-area: 2 / 2 / span 1 / span 1;
+    display: inline-block;
+    width: 90%;
+}
+
+#recentposts,
+#recentpostsp,
+#pages,
+#pagesli,
+#social,
+#socialli {
+    width: 95%;
 }
 
 #recentposts a {
@@ -414,7 +438,13 @@ footer {
 }
 
 /* Responsive Phone */
-@media only screen and (max-width: 760px) and (min-width: 400px) {
+@media only screen and (max-width: 760px){
+    /* Navigation */
+    .navigation-container,
+    .socials-container {
+        display: none;
+    }
+
     /* sponsors */
 
     .sponsors-container {
@@ -422,6 +452,11 @@ footer {
         flex-wrap: wrap;
         height: auto;
         justify-content: center;
+    }
+
+    .sponsors-h2,
+    .videos-h2{
+        margin-left: 20px;
     }
 
     .sponsors-container img {
@@ -432,8 +467,8 @@ footer {
 
     /* videos */
     .videos-container {
-        width: 400px;
-        grid-template-columns: 400px;
+        width: 100%;
+        grid-template-columns: 100%;
         grid-template-rows: repeat(3, 1fr);
         /* margin-bottom: 3rem; */
     }
@@ -446,6 +481,8 @@ footer {
     .videos-grid {
         display: flex;
         justify-content: center;
+        width: 92%;
+        margin: auto;
     }
     
     .videos-container img {
@@ -462,6 +499,7 @@ footer {
 
     .logo-grid {
         grid-area: 1 / 1 / span 1 / span 1;
+        width: 98%;
     }
 
     #recentposts a {
@@ -476,6 +514,7 @@ footer {
         grid-area: 3 / 1 / span 1 / span 1;
         padding-top: 0.8rem;
     }
+
 
     #pages {
         padding-top: 5rem;
@@ -521,5 +560,9 @@ footer {
 
     #tiktok {
         white-space: nowrap;
+    }
+
+    #pagesli #teams {
+        padding-right: 0rem;
     }
 }
